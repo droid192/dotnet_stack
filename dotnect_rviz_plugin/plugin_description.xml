@@ -1,0 +1,9 @@
+<library path="lib/libdotnect_rviz_plugin">
+  <class name="dotnect_rviz_plugin/dotnect_stack"
+         type="dotnect_rviz_plugin::dotnect_panel"
+         base_class_type="rviz::Panel">
+    <description>
+      Control GUI for metapackage dotnect_stack to adjust paramaters during runtime.
+    </description>
+  </class>
+</library>

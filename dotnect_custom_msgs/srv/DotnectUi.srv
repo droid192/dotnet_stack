@@ -1,0 +1,14 @@
+#request
+string    object_name
+bool      rbool
+bool[]    rbools
+int32     rint
+int32[]   rints
+float64   rdbl
+float64[] rdbls
+string    rstr
+---
+#response
+bool      rbool
+float64   rdbl
+float64[] rdbls

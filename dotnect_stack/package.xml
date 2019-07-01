@@ -1,0 +1,22 @@
+<package>
+  <name>dotnect_stack</name>
+  <version>0.0.0</version>
+  <description> Repository -> README.md </description>
+  <maintainer email="fake@mail.de">none</maintainer>
+  <license>BSD-3-Clause</license>
+  <url type="repository"></url>
+  <url type="bugtracker"></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>dotnect_custom_msgs</run_depend>
+  <run_depend>dotnect_dgram_socket</run_depend>
+  <run_depend>dotnect_platform</run_depend>
+  <run_depend>dotnect_markers</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>rviz</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

@@ -1,0 +1,6 @@
+# push all
+  #/build/*
+  #!/src/pkgname
+
+# ignore backups or: find . -name "*~" -delete
+*~

@@ -1,0 +1,20 @@
+<!-- file: dotnect.launch -->
+<launch>
+   <!-- start your camera device, in this case kinectv1 (should be done from bash, because of terminal screen overload)
+	 <include file="$(find freenect_launch)/launch/freenect.launch" />  -->
+
+   <!-- start dotnect_dgram_socket <1:groupIP> <2:socketPort> <3:localInterfaceName> <4:verbose:0/1(int)> -->
+   <node pkg="dotnect_dgram_socket" type="dotnect_dgram_socket" name="dotnect_dgram_socket" output="screen" args="230.0.0.1 4445 wlp3s0 0" />
+
+   <!-- start dotnect_markers -->
+   <node pkg="dotnect_markers" type="dotnect_markers" name="dotnect_markers" output="screen" args="" />
+
+   <!-- start dotnect_platform <1:xma(int)> <2:pos/vel(int)> <3:nPoints(int)> <4:showURDF(0:1)> <offset5-7(dbl dbl dbl)> <scale8-10(dbl dbl dbl)>-->
+   <node pkg="dotnect_platform" type="dotnect_platform" name="dotnect_platform" output="screen" args="0 0 3 0 0 0 1 1 1 1" />
+
+   <!-- start rviz with config file -->
+   <node pkg="rviz" type="rviz" name="my_rviz" output="screen" args=" -vd $(find dotnect_launch)/config/rviz_config.rviz" />
+
+   <!-- set up further frames (not used)
+   <node pkg="tf" type="static_transform_publisher" name="map2frame_0" output="screen" args="-1.0 1.0 0.0 0 0 0 1 map frame_0 1" /> -->
+</launch>
